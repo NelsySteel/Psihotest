@@ -1,7 +1,7 @@
 object FormMain: TFormMain
   Left = 0
   Top = 0
-  ClientHeight = 101
+  ClientHeight = 171
   ClientWidth = 218
   Color = clBtnFace
   TransparentColor = True
@@ -16,13 +16,27 @@ object FormMain: TFormMain
   Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object BitBtn1: TBitBtn
+  object TestBtn: TBitBtn
     Left = 40
     Top = 24
     Width = 161
     Height = 49
     Caption = #1055#1088#1086#1081#1090#1080' '#1090#1077#1089#1090
+    DoubleBuffered = True
+    ParentDoubleBuffered = False
     TabOrder = 0
+    OnClick = TestBtnClick
+  end
+  object Results: TBitBtn
+    Left = 40
+    Top = 79
+    Width = 161
+    Height = 49
+    Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099
+    DoubleBuffered = True
+    ParentDoubleBuffered = False
+    TabOrder = 1
+    OnClick = TestBtnClick
   end
   object MainMenu1: TMainMenu
     Left = 8

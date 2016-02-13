@@ -8,7 +8,7 @@ uses
 
 type
   TFormMain = class(TForm)
-    BitBtn1: TBitBtn;
+    TestBtn: TBitBtn;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
     Admin1: TMenuItem;
@@ -22,7 +22,9 @@ type
     MenuTest: TMenuItem;
     MenuExit: TMenuItem;
     N2: TMenuItem;
+    Results: TBitBtn;
     procedure MenuExitClick(Sender: TObject);
+    procedure TestBtnClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,10 +37,16 @@ var
 implementation
 
 {$R *.dfm}
+uses User,Test,Result;
+
+procedure TFormMain.TestBtnClick(Sender: TObject);
+begin
+  FormResult.Show;
+end;
 
 procedure TFormMain.MenuExitClick(Sender: TObject);
 begin
-Halt;
+  Halt;
 end;
 
 end.

@@ -8,9 +8,9 @@ uses
 
 type
   TFormDBUtils = class(TForm)
-    ADOConnection1: TADOConnection;
-    ADOQuery1: TADOQuery;
-    DataSource1: TDataSource;
+    ADOConnection: TADOConnection;
+    ADOQuery: TADOQuery;
+    DataSource: TDataSource;
   private
     { Private declarations }
   public
