@@ -36,7 +36,7 @@ object FormMain: TFormMain
     DoubleBuffered = True
     ParentDoubleBuffered = False
     TabOrder = 1
-    OnClick = TestBtnClick
+    OnClick = ResultBtnClick
   end
   object MainMenu1: TMainMenu
     Left = 8
@@ -44,6 +44,7 @@ object FormMain: TFormMain
       Caption = 'File'
       object MenuTest: TMenuItem
         Caption = #1055#1088#1086#1081#1090#1080' '#1090#1077#1089#1090'....'
+        OnClick = TestBtnClick
       end
       object MenuExit: TMenuItem
         Caption = #1042#1099#1093#1086#1076'...'

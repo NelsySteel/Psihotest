@@ -13,7 +13,6 @@ object FormDBUtils: TFormDBUtils
   PixelsPerInch = 96
   TextHeight = 13
   object ADOConnection: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=test.' +
       'mdb;Mode=Share Deny None;Persist Security Info=False;Jet OLEDB:S' +
@@ -23,9 +22,8 @@ object FormDBUtils: TFormDBUtils
       'Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Crea' +
       'te System Database=False;Jet OLEDB:Encrypt Database=False;Jet OL' +
       'EDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact Without' +
-      ' Replica Repair=False;Jet OLEDB:SFP=False'
+      ' Replica Repair=False;Jet OLEDB:SFP=False;'
     LoginPrompt = False
-    Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 48
     Top = 8
@@ -43,5 +41,28 @@ object FormDBUtils: TFormDBUtils
     DataSet = ADOQuery
     Left = 216
     Top = 8
+  end
+  object ADOQuery1: TADOQuery
+    Connection = ADOConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      '')
+    Left = 136
+    Top = 72
+  end
+  object DataSource1: TDataSource
+    DataSet = TempQuery
+    Left = 216
+    Top = 64
+  end
+  object TempQuery: TADOQuery
+    Connection = ADOConnection
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      '')
+    Left = 136
+    Top = 136
   end
 end

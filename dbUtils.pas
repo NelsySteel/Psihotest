@@ -11,6 +11,9 @@ type
     ADOConnection: TADOConnection;
     ADOQuery: TADOQuery;
     DataSource: TDataSource;
+    ADOQuery1: TADOQuery;
+    DataSource1: TDataSource;
+    TempQuery: TADOQuery;
   private
     { Private declarations }
   public

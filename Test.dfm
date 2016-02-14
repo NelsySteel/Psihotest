@@ -5,48 +5,72 @@ object FormTest: TFormTest
   Margins.Bottom = 10
   ActiveControl = CheckListBox
   Anchors = [akLeft, akTop, akRight, akBottom]
-  AutoSize = True
-  ClientHeight = 384
+  ClientHeight = 420
   ClientWidth = 906
   Color = clBtnFace
+  Constraints.MinHeight = 350
+  Constraints.MinWidth = 820
   Font.Charset = RUSSIAN_CHARSET
   Font.Color = clNavy
   Font.Height = -16
   Font.Name = 'Century Gothic'
   Font.Style = []
-  FormStyle = fsStayOnTop
   GlassFrame.Enabled = True
   Padding.Bottom = 10
   OldCreateOrder = False
   Position = poDesktopCenter
   OnCreate = FormCreate
-  OnPaint = FormPaint
+  DesignSize = (
+    906
+    420)
   PixelsPerInch = 96
   TextHeight = 21
   object CheckListBox: TCheckListBox
     AlignWithMargins = True
     Left = 3
-    Top = 3
+    Top = 11
     Width = 900
-    Height = 340
+    Height = 298
+    TabStop = False
     OnClickCheck = CheckListBoxClickCheck
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Constraints.MinWidth = 800
+    DoubleBuffered = False
     IntegralHeight = True
-    ItemHeight = 20
+    ItemHeight = 21
     ParentColor = True
-    Style = lbOwnerDrawVariable
+    ParentDoubleBuffered = False
     TabOrder = 0
   end
   object BitBtn1: TBitBtn
-    Left = 384
-    Top = 349
-    Width = 75
+    Left = 272
+    Top = 383
+    Width = 249
     Height = 25
     Margins.Bottom = 10
-    Caption = 'BitBtn1'
-    DoubleBuffered = True
+    Anchors = [akLeft, akBottom]
+    Caption = #1057#1083#1077#1076#1091#1102#1097#1080#1081' '#1074#1086#1087#1088#1086#1089
+    Default = True
+    DoubleBuffered = False
+    Layout = blGlyphBottom
+    Margin = 1
     ParentDoubleBuffered = False
-    Style = bsNew
     TabOrder = 1
     OnClick = BitBtn1Click
+  end
+  object ProgressBar1: TProgressBar
+    Left = 256
+    Top = 336
+    Width = 281
+    Height = 17
+    Max = 250
+    BarColor = clHotLight
+    TabOrder = 2
+  end
+  object TempQ: TADOQuery
+    Connection = FormDBUtils.ADOConnection
+    Parameters = <>
+    Left = 88
+    Top = 328
   end
 end

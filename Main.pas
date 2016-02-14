@@ -24,6 +24,7 @@ type
     N2: TMenuItem;
     Results: TBitBtn;
     procedure MenuExitClick(Sender: TObject);
+    procedure ResultBtnClick(Sender: TObject);
     procedure TestBtnClick(Sender: TObject);
   private
     { Private declarations }
@@ -39,9 +40,14 @@ implementation
 {$R *.dfm}
 uses User,Test,Result;
 
-procedure TFormMain.TestBtnClick(Sender: TObject);
+procedure TFormMain.ResultBtnClick(Sender: TObject);
 begin
   FormResult.Show;
+end;
+
+procedure TFormMain.TestBtnClick(Sender: TObject);
+begin
+  FormTest.Show;
 end;
 
 procedure TFormMain.MenuExitClick(Sender: TObject);

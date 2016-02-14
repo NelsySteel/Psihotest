@@ -30,7 +30,7 @@ begin
   FormDBUtils.ADOQuery.SQL.Add('SELECT type_desc AS Тип, count AS Показатель FROM user_data LEFT JOIN types ON user_data.type_id = types.type_id WHERE user_id=1;');
   FormDBUtils.ADOQuery.Active:=True;
 
-  DBGrid1.Columns[0].Width:=50;
+  DBGrid1.Columns[0].Width:=150;
 end;
 
 end.
