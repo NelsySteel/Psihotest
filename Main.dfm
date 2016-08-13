@@ -2,7 +2,7 @@ object FormMain: TFormMain
   Left = 0
   Top = 0
   ClientHeight = 171
-  ClientWidth = 218
+  ClientWidth = 240
   Color = clBtnFace
   TransparentColor = True
   TransparentColorValue = clPurple
@@ -14,6 +14,7 @@ object FormMain: TFormMain
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object TestBtn: TBitBtn
@@ -39,15 +40,16 @@ object FormMain: TFormMain
     OnClick = ResultBtnClick
   end
   object MainMenu1: TMainMenu
-    Left = 8
+    Left = 16
+    Top = 128
     object File1: TMenuItem
       Caption = 'File'
       object MenuTest: TMenuItem
-        Caption = #1055#1088#1086#1081#1090#1080' '#1090#1077#1089#1090'....'
+        Caption = #1055#1088#1086#1081#1090#1080' '#1090#1077#1089#1090'...'
         OnClick = TestBtnClick
       end
       object MenuExit: TMenuItem
-        Caption = #1042#1099#1093#1086#1076'...'
+        Caption = #1042#1099#1093#1086#1076
         GroupIndex = 1
         OnClick = MenuExitClick
       end

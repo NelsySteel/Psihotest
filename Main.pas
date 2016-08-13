@@ -26,10 +26,15 @@ type
     procedure MenuExitClick(Sender: TObject);
     procedure ResultBtnClick(Sender: TObject);
     procedure TestBtnClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
+    FUserID: Integer;
+    function GetUserID: Integer;
+    procedure InitNewData;
   public
     { Public declarations }
+    property UserID: Integer read GetUserID write FUserID;
   end;
 
 var
@@ -52,7 +57,21 @@ end;
 
 procedure TFormMain.MenuExitClick(Sender: TObject);
 begin
-  Halt;
+  Application.Terminate;
 end;
 
+procedure TFormMain.InitNewData;
+begin
+  FUserId:=1;
+end;
+
+procedure TFormMain.FormCreate(Sender: TObject);
+begin
+  InitNewData;
+end;
+
+function TFormMain.GetuserID: Integer;
+begin
+  Result := FUserID;
+end;
 end.

@@ -54,7 +54,7 @@ object FormDBUtils: TFormDBUtils
   object DataSource1: TDataSource
     DataSet = TempQuery
     Left = 216
-    Top = 64
+    Top = 72
   end
   object TempQuery: TADOQuery
     Connection = ADOConnection

@@ -42,9 +42,9 @@ object FormTest: TFormTest
     ParentDoubleBuffered = False
     TabOrder = 0
   end
-  object BitBtn1: TBitBtn
+  object ButtonNext: TBitBtn
     Left = 272
-    Top = 383
+    Top = 375
     Width = 249
     Height = 25
     Margins.Bottom = 10
@@ -56,7 +56,7 @@ object FormTest: TFormTest
     Margin = 1
     ParentDoubleBuffered = False
     TabOrder = 1
-    OnClick = BitBtn1Click
+    OnClick = ButtonNextClick
   end
   object ProgressBar1: TProgressBar
     Left = 256

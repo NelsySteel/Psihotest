@@ -14,10 +14,13 @@ type
     ADOQuery1: TADOQuery;
     DataSource1: TDataSource;
     TempQuery: TADOQuery;
+
+    function GetQuery(s:string): TADOQuery;
   private
     { Private declarations }
   public
     { Public declarations }
+
   end;
 
 var
@@ -26,5 +29,13 @@ var
 implementation
 
 {$R *.dfm}
+
+function TFormDBUtils.GetQuery(S:string): TADOQuery;
+begin
+  if (S = 'MainQuery') then Result := ADOQuery
+  else if (s = 'AdditionalQuery') then Result := ADOQuery1
+  else Result := TempQuery;
+
+end;
 
 end.
