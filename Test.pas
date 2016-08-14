@@ -8,7 +8,7 @@ uses
   ComCtrls, DB, ADODB, Main;
 
 type
-  TPosition = (pos1, pos2, pos3, pos4, neg1, neg2, neg3, neg4);
+  TPosition = (pos1, pos2, pos3, pos4, neg1, neg2, neg3, neg4, neg5);
   TType = (Null, Gipertim, Cikloid, Labil, AstenoNerv, Sensitive, Psihasten, Shizoid, Epilept,
    Isteroid, Unstable, Konform, Negative, Dissimulation, Honest, Psihopat, Emansipation,
    Delikvent, Male, Female, Alcohole);
@@ -47,7 +47,7 @@ var
 
 const
   POS_TEXT: array[TPosition] of String =
-  ('pos_1', 'pos_2', 'pos_3', 'pos_4', 'neg_1', 'neg_2','neg_3', 'neg_4');
+  ('pos_1', 'pos_2', 'pos_3', 'pos_4', 'neg_1', 'neg_2','neg_3', 'neg_4', 'neg_5');
 implementation
 
 {$R *.dfm}
@@ -78,6 +78,7 @@ begin
   QuestionsQuery.SQL.Add('FROM questions ');
   QuestionsQuery.SQL.Add('WHERE sec_id=');
   QuestionsQuery.SQL.Add(IntToStr(Section));
+  QuestionsQuery.SQL.Add('ORDER BY quest_nom');
   QuestionsQuery.Active:=True;
 
   CheckListBox.Clear(); // Компонент типа TCheckListBox
